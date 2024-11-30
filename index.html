@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section>
+        <div class="container">
+            <header>
+                <h1 class="bg-dange">Bookmarker</h1>
+            </header>
+            <div class="favorite-site">
+                <h2 class="text-center"> <i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites <i class="fa-solid fa-bookmark"></i></h2>
+                <div class="my-4">
+                    <label class="mb-3" for="name"><i class="pe-2 fa-solid fa-book-bookmark"></i> Site Name</label>
+                    <input  placeholder="Bookmark Name" class="form-control" id="name" type="text" oninput="validationInputs(this , 'msgName')">
+                    <p class="alert alert-danger d-none" id="msgName">
+                        invalid pattern
+                    </p>
+                </div>
+                <div class="mb-4">
+                    <label class="mb-3" for="site-url"> <i class="pe-2 fa-solid fa-link"></i>Site URL</label>
+                    <input placeholder="Website URL" class="form-control" id="siteUrl" type="url" oninput="validationInputs(this , 'msgUrl')">
+                    <p class="alert alert-danger d-none" id="msgUrl">
+                        invalid pattern
+                    </p>
+                    <!-- start dialog element -->
+                    <div class="  top-0 end-0 start-0 bottom-0 position-fixed   justify-content-center align-items-center d-none" id="dialog">
+                        <div class=" inner position-absolute bg-light p-4">
+                            <button class="border-0 bg-white position-absolute end-0 top-0" id="btnSub"><i class="fa-solid fa-xmark fs-5 p-3"></i></button>
+                            <div class="circls d-flex">
+                                <div class="rounded-5 bg-danger me-2"></div>
+                                <div class="rounded-5 bg-warning me-2"></div>
+                                <div class="rounded-5 bg-success"></div>
+                            </div>
+                            <h3 class="my-4">Site Name or Url is not valid, Please follow the rules below :</h3>
+                            <p><i class="fa-regular fa-circle-right me-2 text-danger fs-5"></i>Site name must contain at least 3 characters</p>
+                            <p><i class="fa-regular fa-circle-right me-2 text-danger fs-5"></i>Site URL must be a valid one</p>
+                        </div>
+                    </div>
+                    <!-- end dialog element -->
+                </div>
+                <button class="align-self-center " onclick="addWeb()">Submit</button>
+            </div>
+            <input id="search" oninput="searchData()" type="text" class="form-control w-50 m-auto mt-5" name="search" placeholder="Search by Name">
+            <table class="w-100 bg-light mt-4">
+                <thead class="border border-bottom">
+                    <tr>
+                        <th>Index</th>
+                        <th>Website Name</th>
+                        <th>Visit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="webSite">
+                    
+                    
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <script src="js/index.js"></script>
+</body>
+</html>

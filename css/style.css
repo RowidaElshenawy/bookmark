@@ -1,0 +1,119 @@
+::selection{
+    background-color: rgb(254, 194, 96);
+    color: rgb(53, 46, 40);
+}
+body{
+    background-color: rgb(247, 236, 222);
+}
+section{
+    padding-block: 50px;
+}
+section h1{
+    color: rgb(53, 46, 40);
+    font-weight: 500;
+    font-size: 50px;
+    font-family: "Pacifico", cursive;
+    width: fit-content;
+    margin: auto;
+    position: relative;
+}
+section h1::before{
+    content: "";
+    position: absolute;
+    height: 30%;
+    width: 100%;
+    bottom: 0;
+    z-index: -1;
+    background-color: rgb(254, 194, 96);
+    transition: height 0.5s;
+}
+section h1:hover::before{
+    height: 65%;
+}
+.favorite-site{
+    border-top: dotted 2px #000;
+    border-bottom: dotted 2px #000;
+    padding: 30px 15px;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+}
+section .favorite-site h2{
+    font-family: "Righteous", cursive;
+    font-size:25px;
+    background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+    color: transparent;
+    background-clip: text;
+}
+section .favorite-site label{
+    color: rgb(33, 37, 41);
+    font-size: 17px ;
+    font-weight: 600;
+    font-family: "PT Sans Caption", sans-serif;
+}
+section .favorite-site input::placeholder{
+    font-family: "PT Sans Caption", sans-serif;
+    font-weight: 400;
+    color: #6C757D;
+}
+section .favorite-site .form-control:focus{
+    border-color: #d99c39;
+    box-shadow: 0 0 0 0.25rem #fec26055
+}
+.favorite-site button:last-child{
+    padding: 5px 50px;
+    color: #fff;
+    background-color:  #d1512d;
+    border: 1px solid #d1512d;
+    border-radius: 5px;
+    transition: all 0.5s;
+}
+.favorite-site button:hover{
+    background-color:  #bb4120;
+    display: inline-block;
+}
+table th ,table tbody tr{
+    padding: 9px;
+    text-align: center;
+}
+table tbody tr{
+    border-bottom: 1px solid  #e8ebed ;
+}
+table tbody td{
+    padding: 20px;
+}
+.visit{
+    color: #fff;
+    background-color: #9eb23b;
+    border: 1px solid #9eb23b;
+    padding: 5px 15px;
+    transition: all 0.5s;
+
+}
+.visit:hover{
+    background-color: #8a9e23;
+}
+.deleteItem{
+    color: #fff;
+    padding: 5px 15px;
+    background-color: #eb1d36;
+    border-color: #eb1d36;
+}
+.deleteItem:hover{
+    background-color: #d30820;
+}
+#dialog{
+    background-color: rgba(0, 0,0, 0.5);
+}
+#dialog .inner{
+    width: 450px;
+    border-radius: 5px;
+}
+.circls div{
+    width: 20px;
+    height: 20px;
+}
+#dialog h3{
+    font-family: "Bree Serif", serif;
+    font-size: 21px;
+}
